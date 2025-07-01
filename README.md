@@ -1,17 +1,13 @@
-# 🧾 BÁO CÁO KIỂM THỬ HIỆU SUẤT JMETER
+# BÁO CÁO KIỂM THỬ HIỆU SUẤT JMETER
 
 - **Tên Dự Án**: Load Testing of `fakestoreapi.com/products`  
 - **Ngày Kiểm Thử**: 01/07/2025  
 - **Người Kiểm Thử**: Cao Văn Duy   
 
----
-
 ## 1. Mục Tiêu Kiểm Thử
 
 Mục tiêu của đợt kiểm thử này là đánh giá hiệu năng và khả năng đáp ứng của một dịch vụ API công khai tại địa chỉ `https://fakestoreapi.com/products`. API này trả về danh sách các sản phẩm dạng JSON, thường được sử dụng trong các bài kiểm thử giả lập thương mại điện tử.  
 Kiểm thử được thực hiện bằng công cụ Apache JMeter để mô phỏng nhiều người dùng truy cập đồng thời và gửi request đến API. Mục tiêu là đảm bảo API hoạt động ổn định trong cả điều kiện tải thấp và tải cao, không xảy ra lỗi và thời gian phản hồi nằm trong giới hạn chấp nhận được.
-
----
 
 ## 2. Môi Trường Kiểm Thử
 
@@ -21,8 +17,6 @@ Quá trình kiểm thử được thực hiện trên môi trường đơn giả
 - Kết nối mạng ổn định, không bị giới hạn firewall khi truy cập API công khai
 - Không có proxy hoặc cache nào can thiệp vào quá trình gửi nhận request
 - Không sử dụng hệ thống backend riêng mà chỉ kết nối đến dịch vụ API công cộng `fakestoreapi.com`
-
----
 
 ## 3. Phương Pháp Kiểm Thử
 
@@ -34,13 +28,8 @@ Phương pháp kiểm thử được sử dụng trong đợt này là **kiểm 
 
 JMeter được sử dụng để cấu hình chi tiết số lượng người dùng, thời gian ramp-up, vòng lặp, và các loại listener như Summary Report, Graph Results, View Results Tree để theo dõi kết quả trong thời gian thực.
 
----
-
 ## 4. Kịch Bản Kiểm Thử
-
----
-
-### 🧪 Kịch Bản Kiểm Thử Lần 1
+### Kịch Bản Kiểm Thử Lần 1
 
 - **Tên kịch bản**: Kiểm thử cơ bản với 1 người dùng
 - **Mục đích**: Mục đích của kịch bản này là kiểm tra phản hồi cơ bản của API khi có duy nhất một người dùng gửi một yêu cầu đơn lẻ. Đây là trường hợp đơn giản nhất nhằm xác nhận rằng API đang hoạt động, có thể kết nối được, và trả về dữ liệu đúng như kỳ vọng.
@@ -58,10 +47,7 @@ JMeter được sử dụng để cấu hình chi tiết số lượng người 
 ![image](https://github.com/user-attachments/assets/4c18be20-b583-4b55-b46f-4a6a24c7b49f)
 ![image](https://github.com/user-attachments/assets/619bd167-afb4-48ad-ac52-be3ac1774e94)
 
-
----
-
-### 🧪 Kịch Bản Kiểm Thử Lần 2
+### Kịch Bản Kiểm Thử Lần 2
 
 - **Tên kịch bản**: Kiểm thử với nhiều người dùng đồng thời
 - **Mục đích**: Kịch bản này nhằm mô phỏng tình huống có nhiều người dùng cùng truy cập API trong một khoảng thời gian ngắn. Việc này giúp kiểm tra xem hệ thống có thể đáp ứng được nhiều yêu cầu đồng thời hay không, có xảy ra tình trạng nghẽn hoặc lỗi phản hồi hay không.
@@ -78,7 +64,6 @@ JMeter được sử dụng để cấu hình chi tiết số lượng người 
 ![image](https://github.com/user-attachments/assets/62f4798c-21d7-4976-b0a0-d6b875de8002)
 ![image](https://github.com/user-attachments/assets/8a48bc01-eb93-403b-ac14-89e6f49cfcc1)
 ![image](https://github.com/user-attachments/assets/07497621-29a9-4266-a32a-ae0cea3f5504)
----
 
 ## 5. Kết Luận
 
